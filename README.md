@@ -21,6 +21,6 @@ be displayed when combined with the data__* in `SOURCEDATA.TXT`. (__1__ being th
 - The program shall load the newly generated __CSV__ file into `/data/destination` by using the `load_csv()` method in `SomeStorageLibrary` located in `src/some_storage_library.py`.
 - Provide a link to your solution when you are complete.
 
-> Note: I will simply be executing `python main.py` with the project's root directory as the current working directory. Whatever happens after that is up to you- just make sure the `.csv` you create exists in `data/destination/` after this runs (and that all of the requriements were met, of course).
+> Note: I will simply be executing `python main.py` with the project's root directory as the current working directory. Whatever happens after that is up to you- just make sure the `.csv` you create exists in `data/destination/` after this runs (and that all of the requirements were met, of course).
 
 > Note: use Python >= 3.7 to solve and do not use any other packages or dependencies (e.g. Pandas). You are limited to the Python Standard Library. The goal is to show us your coding style and see how you would approach the problem using plain Python.
