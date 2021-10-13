@@ -11,7 +11,10 @@ def process_header():
     pass
 
 def process_data():
-    pass
+    data_file = open(pathlib.Path('data/source/SOURCEDATA.txt'))
+    data_reader = csv.reader(data_file)
+    data_eng_sample_data = list(data_reader)
+    print(data_eng_sample_data)
 
 def write_data_engineer_sample():
     pass
