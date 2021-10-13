@@ -17,10 +17,9 @@ class DataEngineerSample:
     def process_header(self):
         header_file = open(pathlib.Path('data/source/SOURCECOLUMNS.txt'))
         header_reader = csv.reader(header_file, delimiter='|')
-        # put header in order
-
-        self.data_eng_sample_header = dict(header_reader)
-        pprint.pprint(self.data_eng_sample_header)
+        # put header in order, using a dictionary to sort this file
+        header_dict = dict(header_reader)
+        print([value for key,value in sorted(header_dict.items())])
 
     def process_data(self):
         data_file = open(pathlib.Path('data/source/SOURCEDATA.txt'))
