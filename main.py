@@ -48,4 +48,3 @@ if __name__ == '__main__':
     data_engineer_sample.process_header()
     data_engineer_sample.process_data()
     data_engineer_sample.write_data_engineer_sample_output()
-    print('Done the ETL process...')
