@@ -1,7 +1,6 @@
 import csv
 import pathlib
 import src.some_storage_library
-import pprint
 
 """
 This is the entrypoint to the program. 'python main.py' will be executed and the 
@@ -43,6 +42,7 @@ class DataEngineerSample:
 
 if __name__ == '__main__':
     """Entrypoint"""
+    #TODO: make rerunnable when file already exists in landing zone
     print('Beginning the ETL process...')
     data_engineer_sample = DataEngineerSample()
     data_engineer_sample.process_header()
