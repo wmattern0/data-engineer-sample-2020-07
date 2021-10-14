@@ -17,9 +17,15 @@ class DataEngineerSample:
     def process_header(self):
         header_file = open(pathlib.Path('data/source/SOURCECOLUMNS.txt'))
         header_reader = csv.reader(header_file, delimiter='|')
-        # put header in order, using a dictionary to sort this file
         header_dict = dict(header_reader)
-        print([value for key,value in sorted(header_dict.items())])
+
+        # put headers in numeric order, using a dictionary to sort this file
+        ordered_keys = sorted(header_dict, key=lambda i: int(i))
+        ordered_headers = []
+        for i in ordered_keys:
+            ordered_headers.append(header_dict.get(i))
+        print(ordered_headers)
+        self.data_eng_sample_header = ordered_headers
 
     def process_data(self):
         data_file = open(pathlib.Path('data/source/SOURCEDATA.txt'))
@@ -35,7 +41,6 @@ class DataEngineerSample:
         for row in self.data_eng_sample_data:
             outputWriter.writerow(row)
         writer.load_csv('output.csv')
-        pass
 
 
 if __name__ == '__main__':
