@@ -24,14 +24,12 @@ class DataEngineerSample:
         ordered_headers = []
         for i in ordered_keys:
             ordered_headers.append(header_dict.get(i))
-        print(ordered_headers)
         self.data_eng_sample_header = ordered_headers
 
     def process_data(self):
         data_file = open(pathlib.Path('data/source/SOURCEDATA.txt'))
         data_reader = csv.reader(data_file, delimiter='|')
         self.data_eng_sample_data = list(data_reader)
-        print(self.data_eng_sample_data)
 
     def write_data_engineer_sample_output(self):
         writer = src.some_storage_library.SomeStorageLibrary()
@@ -48,6 +46,6 @@ if __name__ == '__main__':
     print('Beginning the ETL process...')
     data_engineer_sample = DataEngineerSample()
     data_engineer_sample.process_header()
-    #data_engineer_sample.process_data()
-    #data_engineer_sample.write_data_engineer_sample_output()
+    data_engineer_sample.process_data()
+    data_engineer_sample.write_data_engineer_sample_output()
     print('Done the ETL process...')
